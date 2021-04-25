@@ -1,0 +1,9 @@
+2021-04-25 13:12:38 INFO  Train:27 - class domain.train.carriage.PassengerCarriage = 1625af9d-1f62-456f-b817-3515ae928ad2 added to train
+2021-04-25 13:14:58 INFO  Train:33 - class domain.train.carriage.PassengerCarriage = 977b6f37-feab-41a9-81d3-d79ed196b1ca added to train
+2021-04-25 13:14:58 INFO  Train:33 - class domain.train.carriage.CargoCarriage = 285695dd-ae07-4648-8a6f-44b861d9689a added to train
+2021-04-25 13:16:11 INFO  Train:27 - class domain.train.carriage.PassengerCarriage = c90cd09b-4cac-4390-8aac-98e4b122b1d9 added to train
+2021-04-25 13:16:11 INFO  Train:41 - class domain.train.carriage.PassengerCarriage = c90cd09b-4cac-4390-8aac-98e4b122b1d9 dropped from train
+2021-04-25 13:17:28 INFO  Train:33 - class domain.train.carriage.PassengerCarriage = d73912be-730e-4633-9bcb-2e9a72144713 added to train
+2021-04-25 13:17:28 INFO  Train:33 - class domain.train.carriage.CargoCarriage = 52652917-6fa1-4f80-a050-76159de6616c added to train
+2021-04-25 13:17:28 INFO  Train:50 - class domain.train.carriage.PassengerCarriage = d73912be-730e-4633-9bcb-2e9a72144713 dropped from train
+2021-04-25 13:17:28 INFO  Train:50 - class domain.train.carriage.CargoCarriage = 52652917-6fa1-4f80-a050-76159de6616c dropped from train
