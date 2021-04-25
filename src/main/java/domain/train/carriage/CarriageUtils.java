@@ -6,20 +6,20 @@ import domain.user.Passenger;
 
 public class CarriageUtils {
 
-    private boolean checkWeight(CargoCarriage cargoCarriage, double weight) {
+    private static boolean checkWeight(CargoCarriage cargoCarriage, double weight) {
         return !(cargoCarriage.getMaxWeight() - cargoCarriage.getWeight() < weight);
     }
 
-    public void addCargo(Cargo cargo, CargoCarriage cargoCarriage) {
+    public static void addCargo(Cargo cargo, CargoCarriage cargoCarriage) {
         if(checkWeight(cargoCarriage, cargo.getWeight())) {
             cargoCarriage.getCargosList().add(cargo);
             cargoCarriage.setWeight();
         } else {
-            throw new IllegalArgumentException("cannot add more cargo");
+            throw new IllegalArgumentException("This carriage have not enough space");
         }
     }
 
-    public void addDriver(Locomotive locomotive, Driver driver) {
+    public static void addDriver(Locomotive locomotive, Driver driver) {
         if(checkDriver(driver)) {
             locomotive.setDriver(driver);
         } else {
@@ -27,15 +27,15 @@ public class CarriageUtils {
         }
     }
 
-    private boolean checkDriver(Driver driver) {
+    private static boolean checkDriver(Driver driver) {
         return driver.getAge().intValue() >= 18 && driver.isHaveLicence();
     }
 
-    private boolean checkPassenger(Passenger passenger) {
+    private static boolean checkPassenger(Passenger passenger) {
         return passenger.isHaveTicket();
     }
 
-    public void addPassenger(PassengerCarriage passengerCarriage, Passenger passenger) {
+    public static void addPassenger(PassengerCarriage passengerCarriage, Passenger passenger) {
         if(!checkPassenger(passenger)) {
             throw new IllegalArgumentException("passenger have not a ticket");
         }

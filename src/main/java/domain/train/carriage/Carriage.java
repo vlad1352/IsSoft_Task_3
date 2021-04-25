@@ -2,14 +2,13 @@ package domain.train.carriage;
 
 public class Carriage {
 
-    private double number;
+    private String number;
 
-
-    public double getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(double number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 }

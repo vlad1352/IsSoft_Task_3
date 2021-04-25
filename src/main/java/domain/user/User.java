@@ -6,8 +6,6 @@ public class User {
     private final String lastName;
     private final Age age;
 
-
-
     public User(String firstName, String lastName, Age age) {
         this.firstName = firstName;
         this.lastName = lastName;

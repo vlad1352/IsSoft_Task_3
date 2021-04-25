@@ -4,6 +4,7 @@ import domain.cargo.Cargo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class CargoCarriage extends Carriage {
 
@@ -11,9 +12,14 @@ public class CargoCarriage extends Carriage {
     private List<Cargo> cargosList = new ArrayList<>();
     private double weight = 0;
 
-    public CargoCarriage(double maxWeight, double number) {
+    public CargoCarriage(double maxWeight, String number) {
         this.maxWeight = maxWeight;
         super.setNumber(number);
+    }
+
+    public CargoCarriage(double maxWeight) {
+        this.maxWeight = maxWeight;
+        super.setNumber(UUID.randomUUID().toString());
     }
 
     public double getMaxWeight() {
@@ -39,4 +45,5 @@ public class CargoCarriage extends Carriage {
         }
         this.weight = currWeight;
     }
+
 }

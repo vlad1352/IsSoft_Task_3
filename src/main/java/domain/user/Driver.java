@@ -9,6 +9,10 @@ public class Driver extends User {
         this.haveLicence = haveLicence;
     }
 
+    public void setHaveLicence(boolean haveLicence) {
+        this.haveLicence = haveLicence;
+    }
+
     public boolean isHaveLicence() {
         return haveLicence;
     }
