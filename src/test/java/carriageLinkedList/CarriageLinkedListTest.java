@@ -1,4 +1,4 @@
-package myLinkedList;
+package carriageLinkedList;
 
 import TestData.CarriageData;
 import domain.train.carriage.CargoCarriage;
@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-class MyLinkedListTest {
+class CarriageLinkedListTest {
 
-    private MyLinkedList linkedList;
+    private CarriageLinkedList linkedList;
     private List<Carriage> carriageList;
 
     @BeforeEach
@@ -34,7 +34,7 @@ class MyLinkedListTest {
 
     @Test
     void testContains() {
-        linkedList = new MyLinkedList();
+        linkedList = new CarriageLinkedList();
         linkedList.add(carriageList.get(0));
         linkedList.add(carriageList.get(1));
         linkedList.add(carriageList.get(2));
@@ -46,7 +46,7 @@ class MyLinkedListTest {
 
     @Test
     void testRemoveFirst() {
-        linkedList = new MyLinkedList();
+        linkedList = new CarriageLinkedList();
         linkedList.add(carriageList.get(0));
         linkedList.add(carriageList.get(1));
         linkedList.add(carriageList.get(2));
@@ -57,7 +57,7 @@ class MyLinkedListTest {
 
     @Test
     void testRemoveLast() {
-        linkedList = new MyLinkedList();
+        linkedList = new CarriageLinkedList();
         linkedList.add(carriageList.get(0));
         linkedList.add(carriageList.get(1));
         linkedList.add(carriageList.get(2));
@@ -68,7 +68,7 @@ class MyLinkedListTest {
 
     @Test
     void testRemove() {
-        linkedList = new MyLinkedList();
+        linkedList = new CarriageLinkedList();
         linkedList.add(carriageList.get(0));
         linkedList.add(carriageList.get(1));
         linkedList.add(carriageList.get(2));
@@ -79,7 +79,7 @@ class MyLinkedListTest {
     
     @Test
     void testGetFirst() {
-        linkedList = new MyLinkedList();
+        linkedList = new CarriageLinkedList();
         linkedList.add(carriageList.get(0));
         linkedList.add(carriageList.get(1));
         linkedList.add(carriageList.get(2));
@@ -89,7 +89,7 @@ class MyLinkedListTest {
 
     @Test
     void testGetLast() {
-        linkedList = new MyLinkedList();
+        linkedList = new CarriageLinkedList();
         linkedList.add(carriageList.get(0));
         linkedList.add(carriageList.get(1));
         linkedList.add(carriageList.get(2));
@@ -99,7 +99,7 @@ class MyLinkedListTest {
 
     @Test
     void testSize() {
-        linkedList = new MyLinkedList();
+        linkedList = new CarriageLinkedList();
 
         linkedList.add(carriageList.get(0));
         Assertions.assertEquals( linkedList.size(), 1);

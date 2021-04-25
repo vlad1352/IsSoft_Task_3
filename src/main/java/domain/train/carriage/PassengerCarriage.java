@@ -22,6 +22,17 @@ public class PassengerCarriage extends Carriage {
         super.setNumber(number);
     }
 
+    public void addPassenger(Passenger passenger) {
+        if (!passenger.isHaveTicket()) {
+            throw new IllegalArgumentException("passenger have not a ticket");
+        }
+
+        if (maxNumberOfPassengers - getNumberOfPassengers() < 1) {
+            throw new IllegalArgumentException("there are no seats in this carriage");
+        }
+
+        passengers.add(passenger);
+    }
 
     public List<Passenger> getPassengers() {
         return passengers;
@@ -36,11 +47,7 @@ public class PassengerCarriage extends Carriage {
     }
 
     public int getNumberOfPassengers() {
+        this.numberOfPassengers = passengers.size();
         return numberOfPassengers;
     }
-
-    public void setNumberOfPassengers() {
-        this.numberOfPassengers = passengers.size();
-    }
-
 }

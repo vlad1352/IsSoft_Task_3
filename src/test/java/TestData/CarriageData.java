@@ -1,11 +1,11 @@
 package TestData;
 
 import domain.train.carriage.CargoCarriage;
-import domain.train.carriage.Carriage;
 import domain.train.carriage.Locomotive;
 import domain.train.carriage.PassengerCarriage;
 import domain.user.Age;
 import domain.user.Driver;
+import domain.user.User;
 
 import java.util.UUID;
 
@@ -13,7 +13,7 @@ public class CarriageData {
 
     public static Locomotive anyValidLocomotive() {
 
-        return new Locomotive(new Driver("name", "lastname", Age.of(18),true));
+        return new Locomotive(new Driver(true, new User("name", "lastname", Age.of(18))));
     }
 
     public static PassengerCarriage anyValidPassengerCarriage() {

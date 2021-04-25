@@ -1,21 +1,21 @@
-package myLinkedList;
+package carriageLinkedList;
 
 import domain.train.carriage.Carriage;
 
-public class MyLinkedListNode {
+public class CarriageLinkedListNode {
     
     private Carriage value;
-    private MyLinkedListNode next;
+    private CarriageLinkedListNode next;
     
-    public MyLinkedListNode(Carriage value) {
+    public CarriageLinkedListNode(Carriage value) {
         this.value = value;
     }
 
-    public MyLinkedListNode(MyLinkedListNode next) {
+    public CarriageLinkedListNode(CarriageLinkedListNode next) {
         this.next = next;
     }
 
-    public MyLinkedListNode(Carriage value, MyLinkedListNode next) {
+    public CarriageLinkedListNode(Carriage value, CarriageLinkedListNode next) {
         this.value = value;
         this.next = next;
     }
@@ -28,11 +28,11 @@ public class MyLinkedListNode {
         this.value = value;
     }
 
-    public MyLinkedListNode getNext() {
+    public CarriageLinkedListNode getNext() {
         return next;
     }
 
-    public void setNext(MyLinkedListNode next) {
+    public void setNext(CarriageLinkedListNode next) {
         this.next = next;
     }
 }

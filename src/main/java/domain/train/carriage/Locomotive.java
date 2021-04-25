@@ -12,12 +12,20 @@ public class Locomotive extends Carriage {
     }
 
     public Locomotive(Driver driver) {
-        CarriageUtils.addDriver(this, driver);
+        addDriver(driver);
         super.setNumber(UUID.randomUUID().toString());
     }
 
+    public void addDriver(Driver driver) {
+        if(driver.getUser().getAge().intValue() >= 18 && driver.isHaveLicence()) {
+            this.driver = driver;
+        } else {
+            throw new IllegalArgumentException("driver must be over 18 years and has license");
+        }
+    }
+
     public Locomotive(Driver driver, String number) {
-        CarriageUtils.addDriver(this, driver);
+        addDriver(driver);
         super.setNumber(number);
     }
 

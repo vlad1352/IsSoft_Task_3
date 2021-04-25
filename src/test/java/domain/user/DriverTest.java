@@ -8,7 +8,7 @@ class DriverTest {
 
     @Test
     public void isHaveLicence() {
-        Driver driver = new Driver("Vlad", "Dudnitskiy", Age.of(20), true);
+        Driver driver = new Driver(true, new User("Vlad", "Dudnitskiy", Age.of(20)));
         assertTrue(driver.isHaveLicence());
         driver.setHaveLicence(false);
         assertFalse(driver.isHaveLicence());

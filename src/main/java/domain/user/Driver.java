@@ -1,12 +1,26 @@
 package domain.user;
 
-public class Driver extends User {
+public class Driver {
 
     private boolean haveLicence;
+    private User user;
 
-    public Driver(String firstName, String lastName, Age age, boolean haveLicence) {
-        super(firstName, lastName, age);
+    public Driver(User user) {
+        this.user = user;
+        haveLicence = false;
+    }
+
+    public Driver(boolean haveLicence, User user) {
         this.haveLicence = haveLicence;
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setHaveLicence(boolean haveLicence) {

@@ -1,14 +1,14 @@
-package myLinkedList;
+package carriageLinkedList;
 
 import domain.train.carriage.Carriage;
 import domain.train.carriage.Locomotive;
 
-public class MyLinkedList {
+public class CarriageLinkedList {
 
-    private MyLinkedListNode head;
-    private MyLinkedListNode tail;
+    private CarriageLinkedListNode head;
+    private CarriageLinkedListNode tail;
 
-    public MyLinkedList() {
+    public CarriageLinkedList() {
         this.head = null;
         this.tail = null;
     }
@@ -16,13 +16,13 @@ public class MyLinkedList {
     public void add(Carriage carriage) {
         if (head == null) {
             if (carriage.getClass().equals(Locomotive.class)) {
-                head = new MyLinkedListNode(carriage, null);
+                head = new CarriageLinkedListNode(carriage, null);
                 tail = head;
             } else {
                 throw new IllegalArgumentException("locomotive must be the first");
             }
         } else {
-            MyLinkedListNode ln = new MyLinkedListNode(carriage, null);
+            CarriageLinkedListNode ln = new CarriageLinkedListNode(carriage, null);
             tail.setNext(ln);
             tail = ln;
         }
@@ -38,7 +38,7 @@ public class MyLinkedList {
             return true;
         }
 
-        MyLinkedListNode curr = this.head;
+        CarriageLinkedListNode curr = this.head;
         while (!curr.getNext().equals(this.tail)) {
             if (curr.getNext().getValue().equals(carriage)) {
                 curr.setNext(curr.getNext().getNext());
@@ -62,7 +62,7 @@ public class MyLinkedList {
     }
 
     public boolean contains(Carriage carriage) {
-        MyLinkedListNode curr = this.head;
+        CarriageLinkedListNode curr = this.head;
         while (curr != null) {
             if (curr.getValue().equals(carriage)) {
                 return true;
@@ -74,7 +74,7 @@ public class MyLinkedList {
 
     public int size() {
         int size = 0;
-        MyLinkedListNode curr = this.head;
+        CarriageLinkedListNode curr = this.head;
         while (curr != null) {
             size++;
             curr = curr.getNext();

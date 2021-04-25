@@ -2,7 +2,7 @@ package domain.train;
 
 import domain.train.carriage.Carriage;
 import domain.train.carriage.Locomotive;
-import myLinkedList.MyLinkedList;
+import carriageLinkedList.CarriageLinkedList;
 import org.apache.log4j.Logger;
 
 import java.util.*;
@@ -11,14 +11,14 @@ public class Train {
 
     private final String number;
     private Locomotive locomotive;
-    private MyLinkedList train;
+    private CarriageLinkedList train;
 
     private static final Logger logger = Logger.getLogger(Train.class);
 
     public Train(Locomotive locomotive, String number) {
         this.number = number;
         this.locomotive = locomotive;
-        train = new MyLinkedList();
+        train = new CarriageLinkedList();
         train.add(locomotive);
     }
 
@@ -64,11 +64,11 @@ public class Train {
         this.locomotive = locomotive;
     }
 
-    public MyLinkedList getTrain() {
+    public CarriageLinkedList getTrain() {
         return train;
     }
 
-    public void setTrain(MyLinkedList train) {
+    public void setTrain(CarriageLinkedList train) {
         this.train = train;
     }
 

@@ -22,6 +22,14 @@ public class CargoCarriage extends Carriage {
         super.setNumber(UUID.randomUUID().toString());
     }
 
+    public void addCargo(Cargo cargo) {
+        if(maxWeight - cargo.getWeight() > 0) {
+            cargosList.add(cargo);
+        } else {
+            throw new IllegalArgumentException("This carriage have not enough space");
+        }
+    }
+
     public double getMaxWeight() {
         return maxWeight;
     }
@@ -35,15 +43,11 @@ public class CargoCarriage extends Carriage {
     }
 
     public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight() {
         double currWeight = 0;
         for(Cargo cargo: cargosList) {
             currWeight += cargo.getWeight();
         }
         this.weight = currWeight;
+        return weight;
     }
-
 }
